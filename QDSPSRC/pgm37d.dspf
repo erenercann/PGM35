@@ -1,0 +1,36 @@
+     A*%%TS  SD  20250113  130251  WUSR9001    REL-V7R2M0  5770-WDS
+     A*%%EC
+     A                                      DSPSIZ(24 80 *DS3)
+     A                                      CA03(03 'EXIT')
+     A                                      CA12(12 'CANCEL')
+     A          R LISTE                     SFL
+     A*%%TS  SD  20250113  122625  WUSR9001    REL-V7R2M0  5770-WDS
+     A            SELCOD         1   B  4  1
+     A            ITEMCODE       6  0O  4  3
+     A            PRODNAME      20   O  4 10
+     A          R LISTEC                    SFLCTL(LISTE)
+     A*%%TS  SD  20250113  130251  WUSR9001    REL-V7R2M0  5770-WDS
+     A  93                                  SFLDSP
+     A  92                                  SFLDSPCTL
+     A  91                                  SFLCLR
+     A N91                                  SFLEND(*MORE)
+     A                                      SFLSIZ(0006)
+     A                                      SFLPAG(0005)
+     A                                      WINDOW(5 40 10 35 *NOMSGLIN)
+     A                                  3  1'S'
+     A                                      DSPATR(HI)
+     A                                      DSPATR(UL)
+     A                                  3  3'ITEMCD'
+     A                                      DSPATR(HI)
+     A                                      DSPATR(UL)
+     A                                  3 10'PRODUCTNAME         '
+     A                                      DSPATR(HI)
+     A                                      DSPATR(UL)
+     A                                  1 11'SELECT ITEM CODE'
+     A                                      COLOR(TRQ)
+     A                                      DSPATR(RI)
+     A          R DUMMY
+     A*%%TS  SD  20120314  094047  G_BICER     REL-V6R1M0  5761-WDS
+     A                                      ASSUME
+     A                                      KEEP
+     A                                  1  2' '

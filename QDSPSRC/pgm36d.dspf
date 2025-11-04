@@ -1,0 +1,82 @@
+     A*%%TS  SD  20250113  121932  WUSR9001    REL-V7R2M0  5770-WDS
+     A*%%EC
+     A                                      DSPSIZ(24 80 *DS3)
+     A                                      CA03(03 'EXIT')
+     A                                      CA12(12 'CANCEL')
+     A          R BASLIK1
+     A*%%TS  SD  20250113  121932  WUSR9001    REL-V7R2M0  5770-WDS
+     A                                      ASSUME
+     A                                  1  2'PGM36 PRODUCT LIST'
+     A                                      COLOR(TRQ)
+     A                                  1 62DATE
+     A                                      EDTCDE(Y)
+     A                                      COLOR(YLW)
+     A                                  1 72TIME
+     A                                      COLOR(YLW)
+     A          R EKRAN1
+     A*%%TS  SD  20250113  121459  WUSR9001    REL-V7R2M0  5770-WDS
+     A                                      CA10(10)
+     A                                      OVERLAY
+     A                                  1  3'PGM34 PRODUCT REGISTRATION'
+     A                                      COLOR(RED)
+     A                                  4  3'ITEM CODE  :'
+     A                                      DSPATR(HI)
+     A                                  1 32' '
+     A            ITEMCODE1      6S 0B  4 17DSPATR(HI)
+     A                                      COLOR(GRN)
+     A  99                                  DSPATR(PC)
+     A                                 23  3'F3:EXIT'
+     A                                 23 13'F12:GIVE'
+     A                                 23 22'UP'
+     A                                  3 73' '
+     A                                  3 75' '
+     A                                  3 77' '
+     A                                  3 71' '
+     A                                  3 67' '
+     A                                  3 69' '
+     A                                  3 79' '
+     A                                  3 63' '
+     A                                  3 65' '
+     A                                  3 61' '
+     A                                  3 59' '
+     A                                  4  1' '
+     A                                  3 57' '
+     A            MSGACK        77A  O 24  3COLOR(RED)
+     A            DATE0          8Y 0O  1 68EDTWRD('0  /  /    ')
+     A                                 23 27'F10:ADD'
+     A          R LISTE                     SFL
+     A*%%TS  SD  20250113  121459  WUSR9001    REL-V7R2M0  5770-WDS
+     A            ITEMCODE       6Y 0O  5  8
+     A            PRODNAME      20A  O  5 15
+     A            TYPE           1A  O  5 36
+     A            DEPOTCOD       2Y 0O  5 38
+     A            SEQNBR         4S 0O  5  3
+     A          R LISTEC                    SFLCTL(LISTE)
+     A*%%TS  SD  20250113  121459  WUSR9001    REL-V7R2M0  5770-WDS
+     A                                      OVERLAY
+     A  93                                  SFLDSP
+     A  92                                  SFLDSPCTL
+     A  91                                  SFLCLR
+     A N91                                  SFLEND
+     A                                      SFLSIZ(0006)
+     A                                      SFLPAG(0005)
+     A                                  4  8'ITEMCD'
+     A                                      DSPATR(HI)
+     A                                      DSPATR(UL)
+     A                                  4 15'PRODUCTNAME         '
+     A                                      DSPATR(HI)
+     A                                      DSPATR(UL)
+     A                                  4 36'T'
+     A                                      DSPATR(HI)
+     A                                      DSPATR(UL)
+     A                                  4 38'DP'
+     A                                      DSPATR(HI)
+     A                                      DSPATR(UL)
+     A                                  4  3'SQNO'
+     A                                      DSPATR(HI)
+     A                                      DSPATR(UL)
+     A          R TUSLAR1
+     A*%%TS  SD  20250113  121459  WUSR9001    REL-V7R2M0  5770-WDS
+     A                                      OVERLAY
+     A                                 23  3'F3:EXIT'
+     A                                 23 13'F12:CANCEL'

@@ -1,0 +1,12 @@
+     A                                      UNIQUE
+     A          R PGM35TABR
+     A            ITEMCODE       6S         COLHDG('ITEM CODE     ')
+     A            PRODNAME      20A         COLHDG('PROD. NAME    ')
+     A            LENGHT         6S         COLHDG('PROD. LENGHT  ')
+     A            QUANTITY       6S         COLHDG('PROD. QUANTITY')
+     A            LOCATION       4A         COLHDG('LOCATION      ')
+     A            BOXNUMBR      10S         COLHDG('BOX NUMBER    ')
+     A            COLORCOD       5A         COLHDG('COLOR CODE    ')
+     A            TYPE           1A         COLHDG('TYPE          ')
+     A            DEPOTCOD       2S         COLHDG('DEPOT CODE    ')
+     A          K ITEMCODE
